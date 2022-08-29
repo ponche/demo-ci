@@ -1,0 +1,28 @@
+# Pipeline de base pour le plaisir de la pratique 
+
+# Nom du workflow : 
+name: learn-github-actions
+
+# Trigger. Ici lors des push 
+on: [push]
+
+# Liste des jobs : 
+jobs:
+  # Premier job
+  check-bats-version: 
+    # Définition du runner (ubuntu, ddernière version)
+    runs-on: ubuntu-latest
+    steps: 
+      # Action par défaut qui permet de récuperer le code du répo 
+      - uses: actions/checkout@v3
+      # Action qui permet d'installer node 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      # run permet d'exéctuer une commande bash 
+      # ici, j'installe 'bats', un framework de test
+      - run: npm install -g bats 
+      # Et la, j'utilise une commande qui retourne la version de bats 
+      - run: bats -v 
+
+
