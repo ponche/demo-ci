@@ -1,7 +1,7 @@
 # Pipeline de base pour le plaisir de la pratique 
 
 # Nom du workflow : 
-name: learn-github-actions
+name: learn-github-actions-hello-world
 
 # Trigger. Ici lors des push 
 on: [push]
