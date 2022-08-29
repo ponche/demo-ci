@@ -25,4 +25,12 @@ jobs:
       # Et la, j'utilise une commande qui retourne la version de bats 
       - run: bats -v 
 
+  hello-world:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo 'Hello World'
+
+  
+
 
