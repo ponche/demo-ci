@@ -1,6 +1,6 @@
 name: Demo-Env-Var
 
-on: workflow_dispatch
+on: [workflow_dispatch]
 
 env:
   NAME: Rémi 
