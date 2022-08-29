@@ -8,9 +8,9 @@ env:
 jobs: 
   say_hello:
     runs-on: ubuntu-latest
-  env:
-    ENTREPRISE: Aston 
-  steps:
+    env:
+      ENTREPRISE: Aston 
+    steps:
     - name: "Dit bonjour !"
       run: echo "Salut $NAME ! Tu travailles chez $ENTREPRISE ? Alors, un bon $DAY à toi"
       env: 
