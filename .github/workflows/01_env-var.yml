@@ -20,6 +20,6 @@ jobs:
   say_goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: "Dit au revoir !"
-        run: echo " Au revoir $NAME ! Tu travailles pour quelle entreprise ? $ENTREPRISE ?"
+    - name: "Dit au revoir !"
+      run: echo " Au revoir $NAME ! Tu travailles pour quelle entreprise ? $ENTREPRISE ?"
         
