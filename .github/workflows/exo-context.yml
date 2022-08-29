@@ -10,14 +10,14 @@ on: [workflow_dispatch, pull_request, push]
 
 jobs:
   
-- push-context:
+  push-context:
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: push
         run: echo "C'est un push !"
 
-- pull_request: 
+  pull_request: 
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
