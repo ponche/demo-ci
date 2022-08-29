@@ -1,0 +1,29 @@
+# Pipeline de base pour le plaisir de la pratique 
+
+# Nom du workflow : 
+name: exo-context 
+
+# Trigger. Ici lors des push 
+on: [workflow_dispatch, pull_request, push]
+
+# Liste des jobs : 
+
+jobs:
+  push-context: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: push
+        if : ${{ github.event_name == 'push'}}
+        run: echo "C'est un push !"
+
+      - name: pull_request
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "C'est un pull request" 
+
+      - name: affichage name event 
+        run: echo "le nom de event est $github.event_name"
+
+
+
+      
+
