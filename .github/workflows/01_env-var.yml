@@ -12,6 +12,7 @@ jobs:
       ENTREPRISE: Aston 
     steps:
     - name: "Dit bonjour !"
+      uses: actions/checkout@v3
       run: echo "Salut $NAME ! Tu travailles chez $ENTREPRISE ? Alors, un bon $DAY à toi"
       env: 
         DAY: Lundi
@@ -21,5 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "Dit au revoir !"
+      uses: actions/checkout@v3
       run: echo " Au revoir $NAME ! Tu travailles pour quelle entreprise ? $ENTREPRISE ?"
         
