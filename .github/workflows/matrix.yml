@@ -5,6 +5,7 @@ on: workflow_dispatch
 jobs:
   neo:
     strategy: 
+      fail-fast: true
       matrix: 
         fruits: ['une pomme', 'une poire', 'un gland', 'une noissete']
         noms: ['Catherie', 'Kevin', 'Peter']
