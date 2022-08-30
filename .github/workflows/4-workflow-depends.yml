@@ -1,4 +1,4 @@
-name: run-worflow
+name: workflow-job-depends
 
 on: [workflow_dispatch]
  
