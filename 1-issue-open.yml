@@ -1,0 +1,16 @@
+name: issue-open
+
+on: 
+  issues: 
+    types: opened
+
+jobs:
+  bonjour: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: ouveture d'une issue
+        run: echo "Une issue est ouvert"
+
+
+
+
