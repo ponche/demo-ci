@@ -1,0 +1,21 @@
+name: run-worflow
+
+on: [workflow_dispatch]
+ 
+    
+
+jobs:
+  jobone: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: premier jobs
+        run: echo "premier job"
+
+  jobtwo: 
+    runs-on: ubuntu-latest
+    needs: [jobone]
+    steps:
+      - name: deuxième jobs
+        run: echo "le deuxieme job"
+
+
