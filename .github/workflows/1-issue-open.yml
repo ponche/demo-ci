@@ -2,7 +2,7 @@ name: issue-open
 
 on: 
   issues: 
-    types: opened
+    types: [opened]
 
 jobs:
   bonjour: 
