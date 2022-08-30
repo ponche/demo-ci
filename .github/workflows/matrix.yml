@@ -1,0 +1,16 @@
+name: matrix
+
+on: workflow_dispatch
+
+jobs:
+  neo:
+    strategy: 
+      matrix: 
+        fruits: ['une pomme', 'une poire', 'un gland', 'une noissete']
+        noms: ['Catherie', 'Kevin', 'Peter']
+    runs-on: ubuntu-latest
+    steps:
+      - name: matrix
+        run: echo "${{ matrix.noms}} mange ${{ matrix.fruits }} "
+
+
