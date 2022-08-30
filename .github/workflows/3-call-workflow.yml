@@ -1,8 +1,9 @@
-name: request-closed
+name: run-worflow
 
 on: 
-  pull_request: 
-    types: [closed]
+  workflow_run: 
+    types: [completed]
+    workflows: [request-closed]
 
 jobs:
   bonjour: 
@@ -10,7 +11,4 @@ jobs:
     steps:
       - name: ouveture d'une issue
         run: echo "Une merge request vient d'etre fermé"
-
-
-
 
